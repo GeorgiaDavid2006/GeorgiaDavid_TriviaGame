@@ -8,6 +8,7 @@ namespace GeorgiaDavid_TriviaGame
 {
     internal class Program
     {
+        static string[] questions = new string[10];
         static void Main(string[] args)
         {
             
