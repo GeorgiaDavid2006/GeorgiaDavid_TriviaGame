@@ -10,7 +10,7 @@ namespace GeorgiaDavid_TriviaGame
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
