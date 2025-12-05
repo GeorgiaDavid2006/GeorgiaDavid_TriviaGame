@@ -14,18 +14,17 @@ namespace GeorgiaDavid_TriviaGame
 
         static string[] answers =
         {
-            {answers[0], answers[1], answers[2], answers[3]}
-            {answers[4], answers[5], answers[6], answers[7]}
-            {answers[8], answers[9], answers[10], answers[11]}
-            {answers[12], answers[13], answers[14], answers[15]}
-            {answers[16], answers[17], answers[18], answers[19]}
-            {answers[20], answers[21], answers[22], answers[23]}
-            {answers[24], answers[25], answers[26], answers[27]}
-            {answers[28], answers[29], answers[30], answers[31]}
-            {answers[32], answers[33], answers[34], answers[35]}
-            {answers[36], answers[37], answers[38], answers[39]}
+            {"incorrectAnswer1", "incorrectAnswer2", "correctAnswer","incorrectAnswer3"}
+            {"incorrectAnswer1", "correctAnswer", "incorrectAnswer2", "incorrectAnswer3"}
+            {"incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3", "correctAnswer"}
+            {"correctAnswer", "incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3"}
+            {"incorrectAnswer1", "correctAnswer", "incorrectAnswer2", "incorrectAnswer3"}
+            {"correctAnswer", "incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3"}
+            {"incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3", "correctAnswer"}
+            {"incorrectAnswer1", "incorrectAnswer2", "correctAnswer","incorrectAnswer3"}
+            {"incorrectAnswer1", "incorrectAnswer2", "correctAnswer","incorrectAnswer3"}
+            {"incorrectAnswer1", "correctAnswer", "incorrectAnswer2", "incorrectAnswer3"}
         }
-        static int correctAnswer;
 
         static string playerName;
 
@@ -56,7 +55,7 @@ namespace GeorgiaDavid_TriviaGame
 
         static void AskQuestion()
         {
-            for (int question = 0; question < questions.GetLength; question++)
+            for (int question = 0; question <= questions.GetLength; question++)
             {
                 DisplayHUD();
                 Console.WriteLine(questions[question]);
