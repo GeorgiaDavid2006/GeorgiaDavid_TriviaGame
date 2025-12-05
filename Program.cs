@@ -12,6 +12,10 @@ namespace GeorgiaDavid_TriviaGame
         static int numberOfQuestions = 10;
         static int currentQuestion;
 
+        static string[] answers = new string[numberOfAnswers];
+        static int numberOfAnswers = 40;
+        static int correctAnswer;
+
         static string playerName;
 
         static int correctAnswers = 0;
@@ -35,6 +39,11 @@ namespace GeorgiaDavid_TriviaGame
             Console.Clear();
             Console.WriteLine("Welcome, " + playerName);
             Console.ReadKey();
+        }
+
+        static void AskQuestion()
+        {
+
         }
     }
 }
