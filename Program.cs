@@ -33,8 +33,6 @@ namespace GeorgiaDavid_TriviaGame
 
         static void Main(string[] args)
         {
-            questions[0] = ("If you want an if statement to have two conditions, which would you use?")
-            
             PlayerName();
             AskQuestion();
         }
