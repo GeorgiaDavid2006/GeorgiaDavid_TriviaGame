@@ -56,7 +56,10 @@ namespace GeorgiaDavid_TriviaGame
 
         static void AskQuestion()
         {
-            DisplayHUD();
+            foreach (string question in questions)
+            {
+                DisplayHUD();
+            }  
         }
     }
 }
