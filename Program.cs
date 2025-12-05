@@ -55,7 +55,10 @@ namespace GeorgiaDavid_TriviaGame
 
         static void AskQuestion()
         {
-
+            foreach (string question in questions)
+            {
+                Console.WriteLine(question);
+            }
         }
     }
 }
