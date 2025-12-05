@@ -37,6 +37,7 @@ namespace GeorgiaDavid_TriviaGame
             questions[0] = ("If you want an if statement to have two conditions, which would you use?")
             
             PlayerName();
+            AskQuestion();
         }
 
         static void DisplayHUD()
