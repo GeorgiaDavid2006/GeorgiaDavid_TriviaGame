@@ -9,7 +9,20 @@ namespace GeorgiaDavid_TriviaGame
     internal class Program
     {
         static int numberOfQuestions = 10;
-        static string[] questions = {"Question1", "Question2", "Question3", "Question4", "Question5", "Question6", "Question7", "Question8", "Question9", "Question10"};
+        static string[] questions = 
+        {
+         "Question1",
+         "Question2",
+         "Question3", 
+         "Question4", 
+         "Question5", 
+         "Question6", 
+         "Question7", 
+         "Question8", 
+         "Question9", 
+         "Question10"
+        };
+
         static int currentQuestion;
 
         static string[] answers =
