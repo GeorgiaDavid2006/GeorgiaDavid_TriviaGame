@@ -56,6 +56,9 @@ namespace GeorgiaDavid_TriviaGame
 
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine(questions[question]);
+
+                Console.ReadKey();
+                Console.Clear();
             }  
         }
     }
