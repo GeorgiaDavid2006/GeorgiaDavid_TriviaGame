@@ -13,73 +13,73 @@ namespace GeorgiaDavid_TriviaGame
         {
          "If you want an if statement to have two conditions, which symbol should you use?",
          "What does this mean?: !health <= 0",
-         "Question3", 
-         "Question4", 
-         "Question5", 
-         "Question6", 
-         "Question7", 
-         "Question8", 
-         "Question9", 
-         "Question10"
+         "Which of these is a proper for loop?", 
+         "How would you declare an array?", 
+         "What is a string?", 
+         "What is the difference between a float and an int?", 
+         "How would you get the length of a list?", 
+         "How many bits are in a double?", 
+         "If your first if statement returns false, which would you use to check another condition?", 
+         "If you design a quest where a player needs to follow an NPC, and they move slower than their walking speed but faster than their running speed, you are:"
         };
-
         static int currentQuestion;
 
         static string[] answers =
         {
             "==",
-            "&",
+            "$",
             "&&",
-            "#",
+            "||",
             "Health is equal to zero",
             "Health is not less than or equal to zero",
             "Health is less than or equal to zero",
             "Health is less than zero",
-            "Answer9",
-            "Answer10",
-            "Answer11",
-            "Answer12",
-            "Answer13",
-            "Answer14",
-            "Answer15",
-            "Answer16",
-            "Answer17",
-            "Answer18",
-            "Answer19",
-            "Answer20",
-            "Answer21",
-            "Answer22",
-            "Answer23",
-            "Answer24",
-            "Answer25",
-            "Answer26",
-            "Answer27",
-            "Answer28",
-            "Answer29",
-            "Answer30",
-            "Answer31",
-            "Answer32",
-            "Answer33",
-            "Answer34",
-            "Answer35",
-            "Answer36",
-            "Answer37",
-            "Answer38",
-            "Answer39",
-            "Answer40",
+            "(int i = 0, i < 10, i++)",
+            "(int i == 0; i < 10; i++)",
+            "(int i <= 0; i <= 10; i++)",
+            "(int i = 0; i < 10; i++)",
+            "string[] newArray = {}",
+            "string() newArray = {}",
+            "string[0] newArray = {}",
+            "string[] new Array{}",
+            "A number variable",
+            "A sequence of characters",
+            "A single letter variable",
+            "A non-number, non-letter variable such as ? or !",
+            "A float only represents whole numbers, an int can represent whole and floating-point numbers",
+            "An int only represents whole numbers, a float only represents floating-point numbers",
+            "An int only represents whole numbers, a float can represent whole and floating-point numbers",
+            "There is no difference",
+            "myList.Count",
+            "myList.GetLength",
+            "myList.Length",
+            "myList.GetLength(0)",
+            "32",
+            "24",
+            "8",
+            "64",
+            "if()",
+            "else()",
+            "else if()",
+            "if else()",
+            "Banned from making video games for one year",
+            "Banned from making video games",
+            "A good developer",
+            "Gone",
         };
-
         static int answerNumber = 0;
 
         static string playerName;
 
-        static int[] correctAnswers = {3, 2, 1, 1, 1, 1, 1, 1, 1, 1};
+        static int[] correctAnswers = {3, 2, 4, 1, 2, 3, 1, 4, 3, 2};
 
         static bool checkingForParse = true;
 
         static bool isPlaying = true;
 
         static int points = 0;
+
+        static int borderSize = 120;
 
         static void Main(string[] args)
         {
@@ -135,7 +135,7 @@ namespace GeorgiaDavid_TriviaGame
         static void DisplayHUD(int currentQuestion)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(playerName);
+            Console.WriteLine($"\n{playerName}");
             Console.WriteLine($"Question {currentQuestion+1}: {questions[currentQuestion]}");
             if(currentQuestion == 0)
             {
@@ -162,12 +162,26 @@ namespace GeorgiaDavid_TriviaGame
         {
             for (int question = 0; question < questions.Length; question++)
             {
+                for(int border = 0; border < borderSize; border++)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("═");
+                }
+
                 DisplayHUD(question);
                 for (int answer = 0; answer < answers.Length/questions.Length; answer++)
                 {
                     Console.WriteLine($"\n{answer + 1} {answers[answerNumber]}");
                     answerNumber++;
                 }
+
+                for (int border = 0; border < borderSize; border++)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("═");
+                }
+
+                Console.WriteLine("");
 
                 checkingForParse = true;
                 while (checkingForParse == true)
@@ -188,6 +202,10 @@ namespace GeorgiaDavid_TriviaGame
 
                         checkingForParse = false;
                     }
+                    else if(playerAnswer == "otterbox")
+                    {
+                        EasterEgg();
+                    }
                     else
                     {
                         Console.WriteLine("Answer is Invalid");
@@ -202,6 +220,12 @@ namespace GeorgiaDavid_TriviaGame
                 Console.ReadKey();
                 Console.Clear();
             }  
+        }
+
+        static void EasterEgg()
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Congratulations! You found the secret");
         }
     }
 }

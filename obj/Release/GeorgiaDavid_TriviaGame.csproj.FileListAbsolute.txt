@@ -1,0 +1,7 @@
+C:\Users\W0512995\source\repos\GeorgiaDavid_TriviaGame\GeorgiaDavid_TriviaGame\bin\Release\GeorgiaDavid_TriviaGame.exe.config
+C:\Users\W0512995\source\repos\GeorgiaDavid_TriviaGame\GeorgiaDavid_TriviaGame\bin\Release\GeorgiaDavid_TriviaGame.exe
+C:\Users\W0512995\source\repos\GeorgiaDavid_TriviaGame\GeorgiaDavid_TriviaGame\bin\Release\GeorgiaDavid_TriviaGame.pdb
+C:\Users\W0512995\source\repos\GeorgiaDavid_TriviaGame\GeorgiaDavid_TriviaGame\obj\Release\GeorgiaDavid_TriviaGame.csproj.AssemblyReference.cache
+C:\Users\W0512995\source\repos\GeorgiaDavid_TriviaGame\GeorgiaDavid_TriviaGame\obj\Release\GeorgiaDavid_TriviaGame.csproj.CoreCompileInputs.cache
+C:\Users\W0512995\source\repos\GeorgiaDavid_TriviaGame\GeorgiaDavid_TriviaGame\obj\Release\GeorgiaDavid_TriviaGame.exe
+C:\Users\W0512995\source\repos\GeorgiaDavid_TriviaGame\GeorgiaDavid_TriviaGame\obj\Release\GeorgiaDavid_TriviaGame.pdb
