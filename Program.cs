@@ -14,17 +14,8 @@ namespace GeorgiaDavid_TriviaGame
 
         static string[] answers =
         {
-            {"incorrectAnswer1", "incorrectAnswer2", "correctAnswer","incorrectAnswer3"}
-            {"incorrectAnswer1", "correctAnswer", "incorrectAnswer2", "incorrectAnswer3"}
-            {"incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3", "correctAnswer"}
-            {"correctAnswer", "incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3"}
-            {"incorrectAnswer1", "correctAnswer", "incorrectAnswer2", "incorrectAnswer3"}
-            {"correctAnswer", "incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3"}
-            {"incorrectAnswer1", "incorrectAnswer2", "incorrectAnswer3", "correctAnswer"}
-            {"incorrectAnswer1", "incorrectAnswer2", "correctAnswer","incorrectAnswer3"}
-            {"incorrectAnswer1", "incorrectAnswer2", "correctAnswer","incorrectAnswer3"}
-            {"incorrectAnswer1", "correctAnswer", "incorrectAnswer2", "incorrectAnswer3"}
-        }
+            
+        };
 
         static string playerName;
 
@@ -40,8 +31,8 @@ namespace GeorgiaDavid_TriviaGame
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(playerName);
-            Console.WriteLine("Question: " + questions[currentQuestion]);
-            Console.WriteLine("Score: " + correctAnswers);
+            Console.WriteLine("Question:" + questions[currentQuestion]);
+            Console.WriteLine("Score:" + correctAnswers);
         }
 
         static void PlayerName()
@@ -49,8 +40,10 @@ namespace GeorgiaDavid_TriviaGame
             Console.WriteLine("Enter your Name");
             playerName = Console.ReadLine();
             Console.Clear();
+
             Console.WriteLine("Welcome, " + playerName);
             Console.ReadKey();
+            Console.Clear();
         }
 
         static void AskQuestion()
@@ -58,6 +51,10 @@ namespace GeorgiaDavid_TriviaGame
             for (int question = 0; question < questions.Length; question++)
             {
                 DisplayHUD();
+                Console.ReadKey();
+                Console.Clear();
+
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine(questions[question]);
             }  
         }
